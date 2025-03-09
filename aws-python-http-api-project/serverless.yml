@@ -9,14 +9,14 @@ plugins:
 - serverless-offline
 functions:
   api1:
-    handler: api_1.api1
+    handler: src.api_1.api_1.api1
     events:
     - http:
         path: /api1
         method: get
 
   api2:
-    handler: api_2.api2
+    handler: src.api_2.api_2.api2
     events:
     - http:
         path: /api2
