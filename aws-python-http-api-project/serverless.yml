@@ -1,0 +1,23 @@
+service: aws-python-http-api-project
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+plugins:
+- serverless-offline
+functions:
+  api1:
+    handler: api_1.api1
+    events:
+    - http:
+        path: /api1
+        method: get
+
+  api2:
+    handler: api_2.api2
+    events:
+    - http:
+        path: /api2
+        method: get
